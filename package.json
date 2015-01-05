@@ -1,0 +1,19 @@
+{
+  "name": "ess-color",
+  "version": "1.0.0",
+  "description": "An exploration of color usage in IU Enterprise Student Services applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iuux/ess-color.git"
+  },
+  "author": "Chris Basham <csbasham@iu.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iuux/ess-color/issues"
+  },
+  "homepage": "https://github.com/iuux/ess-color"
+}
