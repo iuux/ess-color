@@ -11,10 +11,11 @@ gulp.task('styles', function() {
     .pipe(less({
       compress: true
     }))
+    .on('error', console.error)
     .pipe(prefix())
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.reload({
       stream: true
     }));
-  });
+});
