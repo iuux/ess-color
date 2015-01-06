@@ -6,6 +6,7 @@ gulp.task('browser-sync', function() {
     server: {
       baseDir: './build'
     },
+    startPath: '/sas-manager.html',
     notify: false
   });
 });
