@@ -1,0 +1,20 @@
+{
+  "name": "ess-color",
+  "version": "0.0.0",
+  "homepage": "https://github.com/iuux/ess-color",
+  "authors": [
+    "Chris Basham <chris@bash.am>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "2.2.2"
+  }
+}
