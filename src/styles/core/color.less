@@ -3,7 +3,9 @@
 // http://brand.iu.edu/apply/color.shtml
 //
 
+@color-Cream: #E1D8B7;
 @color-Crimson: #7D110C;
+@color-Leather: #CD894E;
 @color-Majestic: #4B306A;
 @color-Midnight: #44697D;
 @color-Mint: #9ADCC6;
@@ -20,14 +22,18 @@
 @color-Background--light: #fff;
 
 @color-Border: #ddd;
+@color-Border: darken(@color-Cream, 10%);
 
 @color-Brand-bg: #212121;
+@color-Brand-bg: @color-Cream;
 @color-Brand-border: #990000;
+@color-Brand-border: @color-Crimson;
 
 @color-CalendarDay-bg: #e6e6e6;
 @color-CalendarDay-bg--focus: #D00031;
 
 @color-CalendarMonth-bg: @color-OldGold;
+@color-CalendarMonth-bg: mix(@color-Cream, @color-Leather, 70%);
 
 @color-CalendarWeek-bg: @color-Mint;
 @color-CalendarWeek-border: #fbeed5;
@@ -37,7 +43,9 @@
 @color-Drag-bg: red;
 
 @color-EntryGradient-top: @color-OldGold;
+@color-EntryGradient-top: mix(@color-Cream, @color-Leather, 70%);
 @color-EntryGradient-bottom: #A2C417;
+@color-EntryGradient-bottom: mix(@color-Cream, @color-Leather, 70%);
 
 @color-Icon: tint(@color-Majestic, 15%);
 @color-Icon--focus: @color-Majestic;
@@ -45,15 +53,19 @@
 @color-Selection: #6dafbf;
 
 @color-Sidebar-border: #d1c38f;
+@color-Sidebar-border: @color-Border;
 
 @color-SidebarGradient-top: #E1D8B7;
+@color-SidebarGradient-top: #fff;
 @color-SidebarGradient-bottom: #CFC08C;
+@color-SidebarGradient-bottom: #fff;
 
 @color-Slot-bg: #4A3C31;
 
 @color-TableRow-bg--focus: whitesmoke;
 
 @color-Text: #000;
+@color-Text: tint(#000, 10%);
 @color-Text--dark: @color-Text;
 @color-Text--shade: #333;
 @color-Text--medium: #999;

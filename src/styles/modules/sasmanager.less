@@ -159,7 +159,7 @@
   font-size: 1.0em;
   text-align: center;
   background-color: @color-CalendarMonth-bg;
-  color: @color-Text--light;
+  color: @color-Text;
 }
 
 .week-month-display-header {
@@ -181,14 +181,14 @@
 }
 
 #branding-bar {
-  background: @color-Brand-bg url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAuAQMAAADTIeEpAAAABlBMVEV9EQwAAAAFjaZaAAAACXZwQWcAAAABAAAALgDViWeAAAAADElEQVQI12NgoB0AAABcAAGygq7eAAAAAElFTkSuQmCC) repeat-x 0 100%;
-  color: @color-Text--light;
+  background: @color-Brand-bg;
+  color: @color-Text;
   min-height: 46px;
   overflow: hidden;
   text-align: right;
 }
 #branding-bar a {
-  color: @color-Text--light;
+  color: @color-Text;
 }
 #branding-bar ul {
   list-style: none;
@@ -316,7 +316,9 @@ body {
 
 .left-hero-unit {
   border: 1px solid @color-Sidebar-border;
+  border-width: 0 1px 0 0;
   border-radius: 3px;
+  border-radius: 0;
   font-size: 12px;
   background-color: @color-SidebarGradient-top;
   background-image: linear-gradient(to bottom, @color-SidebarGradient-top, @color-SidebarGradient-bottom);
@@ -350,7 +352,7 @@ body {
   text-decoration: underline;
   padding-left: 15%;
   cursor: pointer;
-  text-shadow: 0 2px 3px @color-TextShadow--mediumSolid;
+  //text-shadow: 0 2px 3px @color-TextShadow--mediumSolid;
 }
 
 .confirmation-message {
