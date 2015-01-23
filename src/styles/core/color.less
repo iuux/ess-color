@@ -23,6 +23,7 @@
 
 @color-Border: #ddd;
 @color-Border: darken(@color-Cream, 10%);
+@color-Border--dark: darken(@color-Border, 0%);
 
 @color-Brand-bg: #212121;
 @color-Brand-bg: @color-Cream;
@@ -37,6 +38,7 @@
 
 @color-CalendarWeek-bg: @color-Mint;
 @color-CalendarWeek-border: #fbeed5;
+@color-CalendarWeek-border: @color-Border;
 
 @color-Confirmation-text: @color-Majestic;
 
@@ -44,8 +46,10 @@
 
 @color-EntryGradient-top: @color-OldGold;
 @color-EntryGradient-top: mix(@color-Cream, @color-Leather, 70%);
+@color-EntryGradient-top: tint(@color-Majestic, 50%);
 @color-EntryGradient-bottom: #A2C417;
 @color-EntryGradient-bottom: mix(@color-Cream, @color-Leather, 70%);
+@color-EntryGradient-bottom: tint(@color-Majestic, 50%);
 
 @color-Icon: tint(@color-Majestic, 15%);
 @color-Icon--focus: @color-Majestic;
@@ -53,7 +57,7 @@
 @color-Selection: #6dafbf;
 
 @color-Sidebar-border: #d1c38f;
-@color-Sidebar-border: @color-Border;
+@color-Sidebar-border: @color-Border--dark;
 
 @color-SidebarGradient-top: #E1D8B7;
 @color-SidebarGradient-top: #fff;

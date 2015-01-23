@@ -9,6 +9,7 @@
   color: @color-Text--light;
   background-color: @color-EntryGradient-top;
   background-image: linear-gradient(to bottom, @color-EntryGradient-top, @color-EntryGradient-bottom);
+  box-shadow: 0 0 0 1px tint(@color-Majestic, 20%);
 }
 
 .lockedEntryDetails {
@@ -270,23 +271,26 @@ body {
 #content-container {
 }
 
-.enitre-container {
+.entire-container {
+  display: flex;
 }
 
 .left-navigation {
 }
 
 #left-pane-controller {
-  float: left;
-  width: 25%;
-  height: 100%
+  //float: left;
+  //width: 25%;
+  //height: 100%
+  border-right: 1px solid @color-Border;
 }
 
 #right-pane-viewer {
-  float: right;
+  //float: right;
   padding: 1%;
-  width: 72%;
-  height: 100%;
+  //width: 72%;
+  //height: 100%;
+  flex: 1;
 }
 
 .action-select button {
@@ -311,14 +315,14 @@ body {
 }
 
 .entire-container {
-  height: 100%;
+  //height: 100%;
 }
 
 .left-hero-unit {
-  border: 1px solid @color-Sidebar-border;
-  border-width: 0 1px 0 0;
-  border-radius: 3px;
-  border-radius: 0;
+  //border: 1px solid @color-Sidebar-border;
+  //border-width: 0 1px 0 0;
+  //border-radius: 3px;
+  //border-radius: 0;
   font-size: 12px;
   background-color: @color-SidebarGradient-top;
   background-image: linear-gradient(to bottom, @color-SidebarGradient-top, @color-SidebarGradient-bottom);
