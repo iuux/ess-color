@@ -31,12 +31,16 @@
 @color-Brand-border: @color-Crimson;
 
 @color-CalendarDay-bg: #e6e6e6;
+@color-CalendarDay-bg: tint(@color-Majestic, 50%);
 @color-CalendarDay-bg--focus: #D00031;
+@color-CalendarDay-bg--focus: tint(@color-Majestic, 90%);
 
 @color-CalendarMonth-bg: @color-OldGold;
 @color-CalendarMonth-bg: mix(@color-Cream, @color-Leather, 70%);
+@color-CalendarMonth-bg: @color-Cream;
 
 @color-CalendarWeek-bg: @color-Mint;
+@color-CalendarWeek-bg: tint(@color-Cream, 50%);
 @color-CalendarWeek-border: #fbeed5;
 @color-CalendarWeek-border: @color-Border;
 
@@ -67,6 +71,7 @@
 @color-Slot-bg: #4A3C31;
 
 @color-TableRow-bg--focus: whitesmoke;
+@color-TableRow-bg--focus: tint(@color-Cream, 70%);
 
 @color-Text: #000;
 @color-Text: tint(#000, 10%);
@@ -81,5 +86,7 @@
 @color-TextShadow--mediumSolid: #666;
 @color-TextShadow--darkSolid: #2a2a2a;
 @color-TextShadow--light: rgba(255, 255, 255, 0.75);
+
+@color-TimeTableHead-bg: tint(@color-Cream, 50%);
 
 @color-PopoverTitle-text: @color-Crimson;

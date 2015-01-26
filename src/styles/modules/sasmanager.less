@@ -138,7 +138,7 @@
   text-align: center;
   cursor: pointer;
   color: @color-Text--shade;
-  text-shadow: 0 1px 1px @color-TextShadow--light;
+  text-shadow: 0 1px 0 @color-TextShadow--light;
   margin: 0;
   background-color: @color-Background--light;
 }
@@ -150,8 +150,8 @@
 .day:hover,
 .day:focus {
   background-color: @color-CalendarDay-bg--focus;
-  color: @color-Text--light;
-  text-shadow: 0 0 0 @color-TextShadow--darkSolid;
+  color: @color-Text;
+  //text-shadow: 0 0 0 @color-TextShadow--darkSolid;
   background-position: 0 -15px;
   transition: background-position 0.1s linear;
 }
@@ -179,6 +179,21 @@
 .currentDay {
   background: @color-CalendarDay-bg;
   margin: 0 !important;
+  position: relative;
+
+  &:hover {
+    background: @color-CalendarDay-bg;
+  }
+
+  &::after {
+    bottom: 0;
+    box-shadow: 0 0 0 1px tint(@color-Majestic, 20%);
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 #branding-bar {
@@ -261,6 +276,10 @@
 
 .time-table {
   margin-top: 20px;
+
+  thead {
+    background-color: @color-TimeTableHead-bg;
+  }
 }
 
 html,
