@@ -15,35 +15,45 @@
 // ESS Color Palette
 //
 
+// Lightness calculated from Lab color space.
+// Luminance calculated from luminance() Less function.
+// Luma calculated from luma() Less function.
+
+// Attempted to convert colors into grayscale using different perceptual luminance calculations.
+// Subjectively, lightness or luminance seemed more accurate than luma.
+// http://codepen.io/basham/pen/pvrvgY
+
+// Normalizing all color names to a 20 point scale, in 50 degree increments.
+// For example: 050, 100, 150, 200, ... 800, 850, 900, 950
+// The darker the color, the higher it is on the scale.
+// This roughly follows the naming pattern as provided by Google's Material Design.
+// http://www.google.com/design/spec/style/color.html
+
+// Use the following algorithm to convert a color's luminance value to a name.
+// ```js
+// function colorName(lum) { return Math.round((100 - lum) * 0.2) * 50; }
+// ```
+
+// Color names of `0` or `1000` are essentially white and black,
+// and therefore, they should be ignored, as there's not sufficient distinction.
+
 @color-Accent: @color-Crimson;
+@color-Accent--850: @color-Accent; // 26.83 lightness, 15.53 luminance, 4.79 luma
 
 @color-Base: @color-Cream;
-@color-Base--150: tint(@color-Base, 70%);
-@color-Base--250: tint(@color-Base, 50%);
-@color-Base--500: @color-Base;
-@color-Base--550: darken(@color-Base, 10%);
-
-@color-Base--L96: @color-Base--150; // 95.91
-@color-Base--L93: @color-Base--250; // 93.44
-@color-Base--L86: @color-Base--500; // 86.56
-@color-Base--L80: @color-Base--550; // 79.88
+@color-Base--050: tint(@color-Base, 70%); // 95.91 lightness, 95.36 luminance, 89.78 luma
+@color-Base--100: tint(@color-Base, 50%); // 93.44 lightness, 92.26 luminance, 83.34 luma
+@color-Base--150: @color-Base; // 86.56 lightness, 84.52 luminance, 68.54 luma
+@color-Base--250: darken(@color-Base, 10%); // 79.88 lightness, 76.78 luminance, 55.51 luma
 
 @color-Interactive: @color-Majestic;
-@color-Interactive--050: tint(@color-Interactive, 90%);
-@color-Interactive--100: tint(@color-Interactive, 80%);
-@color-Interactive--200: tint(@color-Interactive, 60%);
-@color-Interactive--250: tint(@color-Interactive, 50%);
-@color-Interactive--325: tint(@color-Interactive, 35%);
-@color-Interactive--425: tint(@color-Interactive, 15%);
-@color-Interactive--500: @color-Interactive;
-
-@color-Interactive--L93: @color-Interactive--050; // 93.04
-@color-Interactive--L86: @color-Interactive--100; // 86.23
-@color-Interactive--L72: @color-Interactive--200; // 71.74
-@color-Interactive--L65: @color-Interactive--250; // 64.58
-@color-Interactive--L53: @color-Interactive--325; // 52.98
-@color-Interactive--L38: @color-Interactive--425; // 37.34
-@color-Interactive--L25: @color-Interactive--500; // 25.06
+@color-Interactive--100: tint(@color-Interactive, 90%); // 93.04 lightness, 92.27 luminance, 83.32 luma
+@color-Interactive--150: tint(@color-Interactive, 80%); // 86.23 lightness, 84.54 luminance, 68.40 luma
+@color-Interactive--300: tint(@color-Interactive, 60%); // 71.74 lightness, 69.09 luminance, 43.61 luma
+@color-Interactive--400: tint(@color-Interactive, 50%); // 64.58 lightness, 61.36 luminance, 33.61 luma
+@color-Interactive--500: tint(@color-Interactive, 35%); // 52.98 lightness, 49.77 luminance, 21.42 luma
+@color-Interactive--650: tint(@color-Interactive, 15%); // 37.34 lightness, 34.31 luminance, 9.99 luma
+@color-Interactive--750: @color-Interactive; // 25.06 lightness, 22.72 luminance, 4.65 luma
 
 @color-Text--dark: tint(#000, 10%);
 @color-Text--light: #fff;
