@@ -38,23 +38,19 @@
 // and therefore, they should be ignored, as there's not sufficient distinction.
 
 @color-Accent: @color-Crimson;
-@color-Accent--850: @color-Accent; // 26.83 lightness, 15.53 luminance, 4.79 luma
+@color-Accent--750: @color-Accent;
 
 @color-Base: @color-Cream;
-@color-Base--050: tint(@color-Base, 70%); // 95.91 lightness, 95.36 luminance, 89.78 luma
-@color-Base--100: tint(@color-Base, 50%); // 93.44 lightness, 92.26 luminance, 83.34 luma
-@color-Base--150: @color-Base; // 86.56 lightness, 84.52 luminance, 68.54 luma
-@color-Base--250: darken(@color-Base, 10%); // 79.88 lightness, 76.78 luminance, 55.51 luma
+@color-Base--050: #f4f1e4;
+@color-Base--075: #efe9d7;
+@color-Base--150: @color-Base;
+@color-Base--250: #c0b89d;
 
 @color-Interactive: @color-Majestic;
-@color-Interactive--100: tint(@color-Interactive, 90%); // 93.04 lightness, 92.27 luminance, 83.32 luma
-@color-Interactive--150: tint(@color-Interactive, 80%); // 86.23 lightness, 84.54 luminance, 68.40 luma
-@color-Interactive--300: tint(@color-Interactive, 60%); // 71.74 lightness, 69.09 luminance, 43.61 luma
-@color-Interactive--400: tint(@color-Interactive, 50%); // 64.58 lightness, 61.36 luminance, 33.61 luma
-@color-Interactive--500: tint(@color-Interactive, 35%); // 52.98 lightness, 49.77 luminance, 21.42 luma
-@color-Interactive--600: tint(@color-Interactive, 20%); // 41.27 lightness, 38.17 luminance, 12.36 luma
-@color-Interactive--650: tint(@color-Interactive, 15%); // 37.34 lightness, 34.31 luminance, 9.99 luma
-@color-Interactive--750: @color-Interactive; // 25.06 lightness, 22.72 luminance, 4.65 luma
+@color-Interactive--100: #e6e0ea;
+@color-Interactive--150: #d9d1df;
+@color-Interactive--400: #9c89ac;
+@color-Interactive--750: @color-Interactive;
 
 @color-Text--dark: tint(#000, 10%);
 @color-Text--light: #fff;
@@ -72,14 +68,14 @@
 @color-Border: @color-Base--250;
 
 @color-Brand-bg: @color-Base--150;
-@color-Brand-border: @color-Accent--850;
+@color-Brand-border: @color-Accent--750;
 
 @color-CalendarDay-bg: @color-Interactive--400;
 @color-CalendarDay-bg--focus: @color-Interactive--100;
 
 @color-CalendarMonth-bg: @color-Base--150;
 
-@color-CalendarWeek-bg: @color-Base--100;
+@color-CalendarWeek-bg: @color-Base--075;
 @color-CalendarWeek-border: @color-Border;
 
 @color-Confirmation-text: @color-Interactive--750;
@@ -89,7 +85,7 @@
 @color-EntryGradient-top: @color-Interactive--400;
 @color-EntryGradient-bottom: @color-Interactive--400;
 
-@color-Icon: @color-Interactive--650;
+@color-Icon: @color-Interactive--750;
 @color-Icon--focus: @color-Interactive--750;
 
 @color-Selection: #6dafbf;
@@ -116,6 +112,6 @@
 @color-TextShadow--darkSolid: #2a2a2a;
 @color-TextShadow--light: rgba(255, 255, 255, 0.75);
 
-@color-TimeTableHead-bg: @color-Base--100;
+@color-TimeTableHead-bg: @color-Base--075;
 
-@color-PopoverTitle-text: @color-Accent--850;
+@color-PopoverTitle-text: @color-Accent--750;
