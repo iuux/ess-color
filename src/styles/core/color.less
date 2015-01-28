@@ -37,6 +37,9 @@
 // Color names of `0` or `1000` are essentially white and black,
 // and therefore, they should be ignored, as there's not sufficient distinction.
 
+@color-White: #fff;
+@color-Black: #000;
+
 @color-Accent: @color-Crimson;
 @color-Accent--750: @color-Accent;
 
@@ -52,8 +55,9 @@
 @color-Interactive--400: #9c89ac;
 @color-Interactive--750: @color-Interactive;
 
-@color-Text--dark: tint(#000, 10%);
-@color-Text--light: #fff;
+@color-Text: @color-Black;
+@color-Text--400: #919191;
+@color-Text--900: #1b1b1b;
 
 //
 // Components
@@ -61,9 +65,6 @@
 
 @color-AppointmentGradient-top: @color-Midnight;
 @color-AppointmentGradient-bottom: #444D7E;
-
-@color-Background--dark: #000;
-@color-Background--light: #fff;
 
 @color-Border: @color-Base--250;
 
@@ -98,12 +99,6 @@
 @color-Slot-bg: #4A3C31;
 
 @color-TableRow-bg--focus: @color-Base--050;
-
-@color-Text: tint(#000, 10%);
-@color-Text--dark: @color-Text;
-@color-Text--shade: #333;
-@color-Text--medium: #999;
-@color-Text--light: #fff;
 
 @color-TextShadow: rgba(0, 0, 0, 0.3);
 @color-TextShadow--trueDarkSolid: #000;
