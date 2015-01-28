@@ -4,11 +4,9 @@
   height: 40px;
   font-size: 12px;
   font-family: arial, helvetica, sans-serif;
-  text-shadow: -1px -1px 0 @color-TextShadow;
   font-weight: bold;
-  background-color: @color-EntryGradient-top;
-  background-image: linear-gradient(to bottom, @color-EntryGradient-top, @color-EntryGradient-bottom);
-  box-shadow: 0 0 0 1px @color-Interactive--750;
+  background-color: @color-EntryDetails-bg;
+  box-shadow: 0 0 0 1px @color-EntryDetails-border;
 }
 
 .lockedEntryDetails {
@@ -37,8 +35,7 @@
 .appointmentDetails {
   .entryDetails();
   border-radius: 3px;
-  background-color: @color-AppointmentGradient-top;
-  background-image: linear-gradient(to bottom, @color-AppointmentGradient-top, @color-AppointmentGradient-bottom);
+  background-color: @color-AppointmentDetails-bg;
 }
 
 .sis-appointment-popover {
@@ -49,7 +46,6 @@
   left: -155px;
   display: none;
   width: 350px;
-  text-shadow: none;
   text-decoration: none;
   padding-bottom: 15%;
 }
@@ -59,7 +55,6 @@
   left: -28px;
   display: none;
   width: 100px;
-  text-shadow: none;
   text-decoration: none;
 }
 
@@ -68,7 +63,6 @@
   left: -28px;
   display: none;
   width: 100px;
-  text-shadow: none;
   text-decoration: none;
 }
 
@@ -78,7 +72,6 @@
   display: none;
   width: 300px;
   min-height: 200px;
-  text-shadow: none;
   text-decoration: none;
 }
 
@@ -91,7 +84,6 @@
   font-weight: bold;
   line-height: 20px;
   text-rendering: optimizelegibility;
-  text-shadow:none;
 }
 
 .close-popover {
@@ -107,7 +99,6 @@
   left: -155px;
   display: none;
   width: 350px;
-  text-shadow: none;
   text-decoration: none;
 }
 
@@ -136,7 +127,7 @@
   line-height: 20px;
   text-align: center;
   cursor: pointer;
-  text-shadow: 0 1px 0 @color-TextShadow--light;
+  text-shadow: 0 1px 0 @color-White;
   margin: 0;
 }
 
@@ -144,12 +135,9 @@
   border: 1px solid @color-Border;
 }
 
-.day:hover,
-.day:focus {
+.day:focus,
+.day:hover {
   background-color: @color-CalendarDay-bg--focus;
-  //text-shadow: 0 0 0 @color-TextShadow--darkSolid;
-  background-position: 0 -15px;
-  transition: background-position 0.1s linear;
 }
 
 .month-navigator {
@@ -167,31 +155,51 @@
 
 .trueSelection {
   color: @color-White;
-  background: @color-Selection !important;
-  text-shadow: 0.1em 0.1em 0.2em @color-TextShadow--trueDarkSolid;
-}
-
-.currentDay {
-  background: @color-CalendarDay-bg;
-  color: @color-White;
-  margin: 0 !important;
+  background-color: @color-CalendarDay-bg;
   position: relative;
-  text-shadow: 0 1px 0 @color-TextShadow--trueDarkSolid;
+  text-shadow: 0 1px 0 @color-Black;
 
+  &:focus,
   &:hover {
-    background: @color-CalendarDay-bg;
-    color: @color-White;
+    background-color: @color-CalendarDay-bg;
   }
 
   &::after {
     bottom: 0;
-    box-shadow: 0 0 0 1px @color-Interactive--750;
+    box-shadow: 0 0 0 1px @color-CalendarDay-border;
     content: '';
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
   }
+}
+
+.currentDay {
+  color: @color-CalendarDay--selected;
+  font-weight: bold;
+  position: relative;
+
+  &:focus,
+  &:hover {
+    background: @color-CalendarDay-bg--focus;
+  }
+
+  &::after {
+    bottom: 0;
+    box-shadow: 0 0 0 1px @color-CalendarDay--selected, inset 0 0 0 1px @color-CalendarDay--selected;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.trueSelection.currentDay {
+  background-color: @color-CalendarDay--selected;
+  color: @color-White;
+  font-weight: inherit;
 }
 
 #branding-bar {
@@ -336,13 +344,7 @@ body {
 }
 
 .left-hero-unit {
-  //border: 1px solid @color-Sidebar-border;
-  //border-width: 0 1px 0 0;
-  //border-radius: 3px;
-  //border-radius: 0;
   font-size: 12px;
-  background-color: @color-SidebarGradient-top;
-  background-image: linear-gradient(to bottom, @color-SidebarGradient-top, @color-SidebarGradient-bottom);
   height: 100%;
   padding: 4%;
 }
@@ -373,7 +375,6 @@ body {
   text-decoration: underline;
   padding-left: 15%;
   cursor: pointer;
-  //text-shadow: 0 2px 3px @color-TextShadow--mediumSolid;
 }
 
 .confirmation-message {
