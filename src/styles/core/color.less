@@ -52,6 +52,7 @@
 @color-Interactive--300: tint(@color-Interactive, 60%); // 71.74 lightness, 69.09 luminance, 43.61 luma
 @color-Interactive--400: tint(@color-Interactive, 50%); // 64.58 lightness, 61.36 luminance, 33.61 luma
 @color-Interactive--500: tint(@color-Interactive, 35%); // 52.98 lightness, 49.77 luminance, 21.42 luma
+@color-Interactive--600: tint(@color-Interactive, 20%); // 41.27 lightness, 38.17 luminance, 12.36 luma
 @color-Interactive--650: tint(@color-Interactive, 15%); // 37.34 lightness, 34.31 luminance, 9.99 luma
 @color-Interactive--750: @color-Interactive; // 25.06 lightness, 22.72 luminance, 4.65 luma
 
@@ -68,59 +69,40 @@
 @color-Background--dark: #000;
 @color-Background--light: #fff;
 
-@color-Border: #ddd;
-@color-Border: darken(@color-Cream, 10%);
-@color-Border--dark: darken(@color-Border, 0%);
+@color-Border: @color-Base--250;
 
-@color-Brand-bg: #212121;
-@color-Brand-bg: @color-Cream;
-@color-Brand-border: #990000;
-@color-Brand-border: @color-Crimson;
+@color-Brand-bg: @color-Base--150;
+@color-Brand-border: @color-Accent--850;
 
-@color-CalendarDay-bg: #e6e6e6;
-@color-CalendarDay-bg: tint(@color-Majestic, 50%);
-@color-CalendarDay-bg--focus: #D00031;
-@color-CalendarDay-bg--focus: tint(@color-Majestic, 90%);
+@color-CalendarDay-bg: @color-Interactive--400;
+@color-CalendarDay-bg--focus: @color-Interactive--100;
 
-@color-CalendarMonth-bg: @color-OldGold;
-@color-CalendarMonth-bg: mix(@color-Cream, @color-Leather, 70%);
-@color-CalendarMonth-bg: @color-Cream;
+@color-CalendarMonth-bg: @color-Base--150;
 
-@color-CalendarWeek-bg: @color-Mint;
-@color-CalendarWeek-bg: tint(@color-Cream, 50%);
-@color-CalendarWeek-border: #fbeed5;
+@color-CalendarWeek-bg: @color-Base--100;
 @color-CalendarWeek-border: @color-Border;
 
-@color-Confirmation-text: @color-Majestic;
+@color-Confirmation-text: @color-Interactive--750;
 
 @color-Drag-bg: red;
 
-@color-EntryGradient-top: @color-OldGold;
-@color-EntryGradient-top: mix(@color-Cream, @color-Leather, 70%);
-@color-EntryGradient-top: tint(@color-Majestic, 50%);
-@color-EntryGradient-bottom: #A2C417;
-@color-EntryGradient-bottom: mix(@color-Cream, @color-Leather, 70%);
-@color-EntryGradient-bottom: tint(@color-Majestic, 50%);
+@color-EntryGradient-top: @color-Interactive--400;
+@color-EntryGradient-bottom: @color-Interactive--400;
 
-@color-Icon: tint(@color-Majestic, 15%);
-@color-Icon--focus: @color-Majestic;
+@color-Icon: @color-Interactive--650;
+@color-Icon--focus: @color-Interactive--750;
 
 @color-Selection: #6dafbf;
 
-@color-Sidebar-border: #d1c38f;
-@color-Sidebar-border: @color-Border--dark;
+@color-Sidebar-border: @color-Border;
 
-@color-SidebarGradient-top: #E1D8B7;
 @color-SidebarGradient-top: #fff;
-@color-SidebarGradient-bottom: #CFC08C;
 @color-SidebarGradient-bottom: #fff;
 
 @color-Slot-bg: #4A3C31;
 
-@color-TableRow-bg--focus: whitesmoke;
-@color-TableRow-bg--focus: tint(@color-Cream, 70%);
+@color-TableRow-bg--focus: @color-Base--050;
 
-@color-Text: #000;
 @color-Text: tint(#000, 10%);
 @color-Text--dark: @color-Text;
 @color-Text--shade: #333;
@@ -134,7 +116,6 @@
 @color-TextShadow--darkSolid: #2a2a2a;
 @color-TextShadow--light: rgba(255, 255, 255, 0.75);
 
-@color-TimeTableHead-bg: tint(@color-Cream, 50%);
+@color-TimeTableHead-bg: @color-Base--100;
 
-@color-PopoverTitle-text: @color-Crimson;
-@color-PopoverTitle-text: darken(@color-Crimson, 0%);
+@color-PopoverTitle-text: @color-Accent--850;
